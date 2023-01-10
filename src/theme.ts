@@ -3,7 +3,16 @@ import { createTheme } from '@mui/material/styles'
 
 export const theme = createTheme({
    typography: {
-      fontFamily: 'Raleway, Arial',
+      fontFamily: [
+         'system-ui',
+         '-apple-system',
+         'BlinkMacSystemFont',
+         'Segoe UI',
+         'Roboto',
+         'Ubuntu',
+         'Helvetica Neue',
+         'sans-serif',
+      ].join(','),
    },
    palette: {
       primary: {
@@ -29,6 +38,7 @@ export const theme = createTheme({
                textTransform: 'none',
                fontSize: 16,
                height: 40,
+               fontWeight: 600,
             },
             textPrimary: {
                paddingLeft: 20,
@@ -72,13 +82,13 @@ export const theme = createTheme({
       MuiDialogTitle: {
          styleOverrides: {
             root: {
-               borderBottom: '1px solid rgb(204,248,250)',
+               borderBottom: '1px solid rgb(204,214,221)',
                marginBottom: 10,
                padding: '10px 15px',
-               '& h2': {
+               '&:h2': {
                   display: 'flex',
                   alignItems: 'center',
-                  fontWeight: 800,
+                  fontWeight: '800',
                },
                '& button': {
                   padding: 8,
